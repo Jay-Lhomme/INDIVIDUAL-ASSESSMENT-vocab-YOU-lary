@@ -145,6 +145,21 @@ const getAll = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getJavaScriptPi = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="language"&equalTo="JavaScript"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const privé = Object.values(data).filter((item) => item.privé);
+      resolve(privé);
+    })
+    .catch(reject);
+});
+
 export {
   getVocab,
   createVocab,
@@ -154,6 +169,7 @@ export {
   privéVocab,
   getHTML,
   getJavaScript,
+  getJavaScriptPi,
   getCSS,
   getAll
 };

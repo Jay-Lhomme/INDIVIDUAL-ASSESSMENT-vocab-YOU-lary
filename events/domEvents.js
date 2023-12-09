@@ -44,6 +44,25 @@ const domEvents = (user) => {
       getVocab(user.uid).then(showVocab);
     }
   });
+
+  document.querySelector('#privé-buttons').addEventListener('click', (e) => {
+    // Filter Language
+    if (e.target.id.includes('html-privé-btn')) {
+      getHTML(user.uid).then(showVocab);
+    }
+
+    if (e.target.id.includes('javascript-privé-btn')) {
+      getJavaScript(user.uid).then(showVocab);
+    }
+
+    if (e.target.id.includes('css-privé-btn')) {
+      getCSS(user.uid).then(showVocab);
+    }
+
+    if (e.target.id.includes('all-privé-btn')) {
+      getVocab(user.uid).then(showVocab);
+    }
+  });
 };
 
 export default domEvents;
