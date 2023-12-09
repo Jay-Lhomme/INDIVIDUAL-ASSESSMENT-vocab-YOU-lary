@@ -1,4 +1,5 @@
-import { getVocab } from '../api/vocabData';
+import { getVocab, privéVocab } from '../api/vocabData';
+import vocabForm from '../components/forms/vocabForm';
 import { showVocab } from '../pages/vocab';
 import { signOut } from '../utils/auth';
 
@@ -10,6 +11,16 @@ const navigationEvents = (user) => {
 
   document.querySelector('#all-vocab').addEventListener('click', () => {
     getVocab(user.uid).then(showVocab);
+  });
+
+  document.querySelector('#privé-btn').addEventListener('click', () => {
+    privéVocab(user.uid).then(showVocab);
+  });
+
+  document.querySelector('#add-vocab-btn').addEventListener('click', (e) => {
+    if (e.target.id.includes('add-vocab-btn')) {
+      vocabForm();
+    }
   });
 };
 

@@ -16,17 +16,17 @@ const domEvents = (user) => {
       }
     }
 
-    // ADD VOCAB
-    if (e.target.id.includes('add-vocab-btn')) {
-      vocabForm();
-    }
-
     // UPDATE VOCAB
-    if (e.target.id.includes('edit-vocab-btn')) {
+    if (e.target.id.includes('update-vocab-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
 
       getSingleVocab(firebaseKey).then((vocabObj) => vocabForm(vocabObj));
     }
+  });
+
+  document.querySelector('#filter-buttons').addEventListener('click', () => {
+    // Filter Language
+
   });
 };
 
