@@ -25,12 +25,12 @@ const navBar = () => {
             <a class="nav-link" href="#" id="add-vocab-btn">Add Vocab</a>
           </li>
             <li>
-            <input
+           <form> <input
               class="form-control mr-sm-2"
               id="search"
               placeholder="Search Vocab"
-              aria-label="Search"
-            />
+              aria-label="Search" />
+              </form>
             </li>
           </ul>
           <span class="navbar-text">

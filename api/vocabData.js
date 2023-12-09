@@ -96,7 +96,10 @@ const getJavaScript = () => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      const publique = Object.values(data).filter((item) => item.publique);
+      resolve(publique);
+    })
     .catch(reject);
 });
 
@@ -108,7 +111,10 @@ const getHTML = () => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      const publique = Object.values(data).filter((item) => item.publique);
+      resolve(publique);
+    })
     .catch(reject);
 });
 
@@ -120,12 +126,15 @@ const getCSS = () => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      const publique = Object.values(data).filter((item) => item.publique);
+      resolve(publique);
+    })
     .catch(reject);
 });
 
-const getAll = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo=""`, {
+const getAll = (uid) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

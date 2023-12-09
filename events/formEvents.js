@@ -1,5 +1,6 @@
 import { createVocab, getVocab, updateVocab } from '../api/vocabData';
 import { showVocab } from '../pages/vocab';
+import timeSubmitted from '../utils/time';
 
 const formEvents = (user) => {
   document.querySelector('#form-container').addEventListener('submit', (e) => {
@@ -13,7 +14,7 @@ const formEvents = (user) => {
         publique: document.querySelector('#publique').checked,
         privé: document.querySelector('#privé').checked,
         uid: user.uid,
-        // timeSubmitted: document.querySelector('#time-submitted').null
+        timeSubmitted: timeSubmitted()
       };
       createVocab(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
@@ -34,7 +35,7 @@ const formEvents = (user) => {
         publique: document.querySelector('#publique').checked,
         privé: document.querySelector('#privé').checked,
         uid: user.uid,
-        // timeSubmitted: document.querySelector('#time-submitted').null,
+        timeSubmitted: timeSubmitted(),
         firebaseKey,
       };
 
