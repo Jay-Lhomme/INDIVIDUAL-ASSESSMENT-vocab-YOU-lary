@@ -29,15 +29,15 @@ const domEvents = (user) => {
   document.querySelector('#filter-buttons').addEventListener('click', (e) => {
     // Filter Language
     if (e.target.id.includes('html-btn')) {
-      getHTML().then(showVocab);
+      getHTML(user.uid).then(showVocab);
     }
 
     if (e.target.id.includes('javascript-btn')) {
-      getJavaScript().then(showVocab);
+      getJavaScript(user.uid).then(showVocab);
     }
 
     if (e.target.id.includes('css-btn')) {
-      getCSS().then(showVocab);
+      getCSS(user.uid).then(showVocab);
     }
 
     if (e.target.id.includes('all-btn')) {

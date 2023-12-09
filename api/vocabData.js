@@ -125,17 +125,14 @@ const getCSS = () => new Promise((resolve, reject) => {
 });
 
 const getAll = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/vocab.json`, {
+  fetch(`${endpoint}/vocab.json?orderBy="uid"&equalTo=""`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => {
-      const publique = Object.values(data).filter((item) => item.publique);
-      resolve(publique);
-    })
+    .then((data) => resolve(Object.values(data)))
     .catch(reject);
 });
 
