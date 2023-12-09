@@ -18,6 +18,17 @@ const showVocab = (array) => {
 
   renderToDOM('#filter-buttons', btnString);
 
+  // PRIVÉ BUTTONS
+  // const privéString = `
+  // <div class="privé-Btns">
+  // <button class="btn btn-secondary" id="javascript-privé-btn">JavaScriptpr</button>
+  // <button class="btn btn-secondary" id="html-privé-btn">HTMLpr</button>
+  // <button class="btn btn-secondary" id="css-privé-btn">CSSpr</button>
+  // <button class="btn btn-secondary" id="all-privé-btn">Allpr</button>
+  // </div>`;
+
+  // renderToDOM('#privé-buttons', privéString);
+
   let domString = '';
   array.forEach((item) => {
     domString += `

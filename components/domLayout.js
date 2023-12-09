@@ -4,6 +4,7 @@ const domLayout = () => {
   const domString = `
   <div id="navigation"></div>
   <div id="filter-buttons"></div>
+  <div id="privé-buttons"></div>
   <div id="main-container"></div>
   <div id="form-container"></div>`;
 
