@@ -1,4 +1,6 @@
-import { deleteVocab, getSingleVocab, getVocab } from '../api/vocabData';
+import {
+  deleteVocab, getCSS, getHTML, getJavaScript, getSingleVocab, getVocab
+} from '../api/vocabData';
 import vocabForm from '../components/forms/vocabForm';
 import { showVocab } from '../pages/vocab';
 
@@ -24,9 +26,23 @@ const domEvents = (user) => {
     }
   });
 
-  document.querySelector('#filter-buttons').addEventListener('click', () => {
+  document.querySelector('#filter-buttons').addEventListener('click', (e) => {
     // Filter Language
+    if (e.target.id.includes('html-btn')) {
+      getHTML().then(showVocab);
+    }
 
+    if (e.target.id.includes('javascript-btn')) {
+      getJavaScript().then(showVocab);
+    }
+
+    if (e.target.id.includes('css-btn')) {
+      getCSS().then(showVocab);
+    }
+
+    if (e.target.id.includes('all-btn')) {
+      getVocab(user.uid).then(showVocab);
+    }
   });
 };
 

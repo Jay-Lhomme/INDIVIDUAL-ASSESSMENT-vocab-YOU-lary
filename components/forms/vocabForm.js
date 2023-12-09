@@ -22,6 +22,7 @@ const vocabForm = (obj = {}) => {
         <label for="definition">Definition</label>
         <textarea class="form-control" placeholder="Enter Definition" id="definition" style="height: 100px">${obj.definition || ''}</textarea>
       </div>
+      <label for="Only Check ONE!"><B>ONLY CHECK ONE</B>!</label>
       <div class="form-check form-switch">
          <input class="form-check-input" type="checkbox" role="switch" id="publique"
         ${obj.publique ? 'checked' : ''} checked>
