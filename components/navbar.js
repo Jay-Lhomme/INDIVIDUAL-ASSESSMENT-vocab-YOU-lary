@@ -16,6 +16,9 @@ const navBar = () => {
               </a>
             </li>
             <li class="nav-item">
+            <a class="nav-link" href="#" id="publique-btn">Publique</a>
+          </li>
+            <li class="nav-item">
               <a class="nav-link" href="#" id="privé-btn">Privé</a>
             </li>
             <li class="nav-item">

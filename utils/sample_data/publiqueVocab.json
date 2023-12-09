@@ -1,0 +1,64 @@
+[{
+  "id": null,
+  "title": "nibh",
+  "definition": "magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes",
+  "language": "high-level",
+  "timeSubmitted": "9:21 PM",
+  "privé": true,
+  "publique": false,
+  "firebaseKey": null
+}, {
+  "id": null,
+  "title": "nulla",
+  "definition": "dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis",
+  "language": "Cross-platform",
+  "timeSubmitted": "10:47 AM",
+  "privé": false,
+  "publique": false,
+  "firebaseKey": null
+}, {
+  "id": null,
+  "title": "orci luctus",
+  "definition": "ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam",
+  "language": "asymmetric",
+  "timeSubmitted": "1:19 PM",
+  "privé": false,
+  "publique": true,
+  "firebaseKey": null
+}, {
+  "id": null,
+  "title": "velit",
+  "definition": "velit id pretium iaculis diam erat fermentum justo nec condimentum",
+  "language": "Automated",
+  "timeSubmitted": "5:08 AM",
+  "privé": true,
+  "publique": false,
+  "firebaseKey": null
+}, {
+  "id": null,
+  "title": "integer ac",
+  "definition": "est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec",
+  "language": "tertiary",
+  "timeSubmitted": "9:54 PM",
+  "privé": false,
+  "publique": true,
+  "firebaseKey": null
+}, {
+  "id": null,
+  "title": "vestibulum aliquet",
+  "definition": "magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus",
+  "language": "function",
+  "timeSubmitted": "4:32 PM",
+  "privé": false,
+  "publique": false,
+  "firebaseKey": null
+}, {
+  "id": null,
+  "title": "ipsum ac",
+  "definition": "dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id",
+  "language": "Compatible",
+  "timeSubmitted": "3:29 AM",
+  "privé": false,
+  "publique": true,
+  "firebaseKey": null
+}]
