@@ -1,5 +1,5 @@
 .vscode/
-.DS_Store
+.DS_main-container
 package-lock.json
 node_modules/
 dist/

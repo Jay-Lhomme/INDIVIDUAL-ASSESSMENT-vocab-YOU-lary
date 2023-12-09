@@ -2,16 +2,18 @@ import { createVocab, getVocab, updateVocab } from '../api/vocabData';
 import { showVocab } from '../pages/vocab';
 
 const formEvents = (user) => {
-  document.querySelector('#main-container').addEventListener('submit', (e) => {
+  document.querySelector('#form-container').addEventListener('submit', (e) => {
     e.preventDefault();
     // SUBMIT FORM
     if (e.target.id.includes('submit-vocab')) {
       const payload = {
         title: document.querySelector('#title').value,
-        image: document.querySelector('#language').value,
+        language: document.querySelector('#language').value,
         definition: document.querySelector('#definition').value,
+        publique: document.querySelector('#publique').checked,
         privé: document.querySelector('#privé').checked,
-        uid: user.uid
+        uid: user.uid,
+        // timeSubmitted: document.querySelector('#time-submitted').null
       };
       createVocab(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
@@ -29,8 +31,10 @@ const formEvents = (user) => {
         title: document.querySelector('#title').value,
         language: document.querySelector('#language').value,
         definition: document.querySelector('#definition').value,
+        publique: document.querySelector('#publique').checked,
         privé: document.querySelector('#privé').checked,
-        user: user.uid,
+        uid: user.uid,
+        // timeSubmitted: document.querySelector('#time-submitted').null,
         firebaseKey,
       };
 

@@ -11,7 +11,10 @@ const getVocab = (uid) => new Promise((resolve, reject) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => {
+      const publique = Object.values(data).filter((item) => item.publique);
+      resolve(publique);
+    })
     .catch(reject);
 });
 

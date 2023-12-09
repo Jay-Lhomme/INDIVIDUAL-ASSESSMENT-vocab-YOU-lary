@@ -3,14 +3,20 @@ import renderToDOM from '../utils/renderToDOM';
 
 const emptyVocab = () => {
   const domString = '<h1>No Vocab</h1>';
-  renderToDOM('#store', domString);
+  renderToDOM('#main-container', domString);
 };
 
 const showVocab = (array) => {
   clearDom();
+  const btnString = `
+  <div class="filter-Btns">
+  <button class="btn btn-secondary" id="javascript-btn">JavaScript</button>
+  <button class="btn btn-secondary" id="html-btn">HTML</button>
+  <button class="btn btn-secondary" id="css-btn">CSS</button>
+  <button class="btn btn-secondary" id="all-btn">All</button>
+  </div>`;
 
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-vocab-btn">Add Some Vocab</button>';
-  renderToDOM('#add-button', btnString);
+  renderToDOM('#filter-buttons', btnString);
 
   let domString = '';
   array.forEach((item) => {
@@ -20,12 +26,12 @@ const showVocab = (array) => {
         <h5 class="card-title">${item.title}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">${item.language}</h6>
         <p class="card-text">${item.definition}</p>
-        <i id="edit-vocab-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-        <i id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
+        <button id="update-vocab-btn--${item.firebaseKey}" class="btn btn-info">EDIT</button>
+        <button id="delete-vocab-btn--${item.firebaseKey}" class="btn btn-danger">DELETE</button>
       </div>
       </div>`;
   });
-  renderToDOM('#store', domString);
+  renderToDOM('#main-container', domString);
 };
 
 export { showVocab, emptyVocab };
